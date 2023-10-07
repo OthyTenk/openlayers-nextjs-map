@@ -20,6 +20,20 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Install Dependencies
+
+This project uses [`pnpm`](https://pnpm.io/) to manage dependencies. To install dependencies, run:
+
+```bash
+pnpm i ol
+```
+The openlayers @types are not included in the `ol` package, so you will need to install them separately:
+
+```bash
+pnpm i @types/ol
+``` 
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
