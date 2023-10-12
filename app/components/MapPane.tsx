@@ -6,11 +6,9 @@ import { useEffect, useRef, useState } from "react";
 // import "./MapPane.css";
 import { Attribution, FullScreen, Rotate, ScaleLine, defaults } from "ol/control";
 import TileLayer from "ol/layer/Tile";
+import { TileWMS } from "ol/source";
 import XYZ from "ol/source/XYZ";
-import vector from "./utils/vector";
 import mapConfig from "../config.json";
-import GeoJSON from "ol/format/GeoJSON";
-import { OSM, TileWMS } from "ol/source";
 
 const WEB_MERCATOR_COORDINATE_SYSTEM_ID = "EPSG:4326"; 
 const geojsonObject = mapConfig.geojsonObject;
