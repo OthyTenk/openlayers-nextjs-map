@@ -45,66 +45,6 @@ export default function Home() {
   const [features, setFeatures] = useState(addMarkers(markersLonLat));
   
   return (
-    // <div className="flex min-h-screen flex-col items-center justify-between p-24">
-    //   <Map1 center={fromLonLat(center) as [number, number]} zoom={zoom}>
-    //     <Layers>
-    //       <TileLayer source={osm} zIndex={0} />
-    //       {showLayer1 && (
-    //         <VectorLayer
-              // source={vector({
-              //   features: new GeoJSON().readFeatures(geojsonObject, {
-              //     dataProjection: "EPSG:4326",
-              //     // featureProjection: get("EPSG:3857"),
-              //   }),
-              // })}
-    //           style={FeatureStyles.MultiPolygon}
-    //         />
-    //       )}
-    //       {showLayer2 && (
-    //         <VectorLayer
-    //           source={vector({
-    //             features: new GeoJSON().readFeatures(geojsonObject2, {
-    //               dataProjection: "EPSG:4326",
-    //               // featureProjection: get("EPSG:3857"),
-    //             }),
-    //           })}
-    //           style={FeatureStyles.MultiPolygon}
-    //         />
-    //       )}
-    //       {showMarker && (
-    //         <VectorLayer source={vector({ features })} style={new Style()} />
-    //       )}
-    //     </Layers>
-    //     <Control>
-    //       <FullScreenControl />
-    //     </Control>
-    //   </Map1>
-    //   <div>
-    //     <input
-    //       type="checkbox"
-    //       checked={showLayer1}
-    //       onChange={(event) => setShowLayer1(event.target.checked)}
-    //     />{" "}
-    //     Johnson County
-    //   </div>
-    //   <div>
-    //     <input
-    //       type="checkbox"
-    //       checked={showLayer2}
-    //       onChange={(event) => setShowLayer2(event.target.checked)}
-    //     />{" "}
-    //     Wyandotte County
-    //   </div>
-    //   <hr />
-    //   <div>
-    //     <input
-    //       type="checkbox"
-    //       checked={showMarker}
-    //       onChange={(event) => setShowMarker(event.target.checked)}
-    //     />{" "}
-    //     Show markers
-    //   </div>
-    // </div>
     <MapPane/>
   );
 }
