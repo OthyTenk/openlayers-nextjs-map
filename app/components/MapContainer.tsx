@@ -4,15 +4,15 @@ import { Tile as TileLayer } from "ol/layer";
 import { fromLonLat } from "ol/proj";
 import { OSM } from "ol/source";
 import {
-    ReactNode,
-    createContext,
-    forwardRef,
-    memo,
-    useEffect,
-    useId,
-    useImperativeHandle,
-    useLayoutEffect,
-    useRef
+  ReactNode,
+  createContext,
+  forwardRef,
+  memo,
+  useEffect,
+  useId,
+  useImperativeHandle,
+  useLayoutEffect,
+  useRef,
 } from "react";
 
 import { boundingExtent } from "ol/extent";

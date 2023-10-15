@@ -10,26 +10,26 @@ import { LayerGroup } from "../components/layers/LayerGroup";
 import { Mali } from "next/font/google";
 import { set } from "lodash";
 
-
-
-
 export default function TextWithMarker() {
-    const[mapSize, setMapSize] = useState({
-      width: "100vw",
-      height: "60vh",
-    });
-    const ref = useRef<Map>(null);
-    const [selectedMarker, setSelectedMarker] = useState("");
-    const [selectedMarkerName, setSelectedMarkerName] = useState("");
-    const [openSidebar, setOpenSidebar] = useState(false);
+  const [mapSize, setMapSize] = useState({
+    width: "100vw",
+    height: "60vh",
+  });
+  const ref = useRef<Map>(null);
+  const [selectedMarker, setSelectedMarker] = useState("");
+  const [selectedMarkerName, setSelectedMarkerName] = useState("");
+  const [openSidebar, setOpenSidebar] = useState(false);
 
-    const markers = [{ id:'124', name: 'Хан-Уул', point:[106.895121, 47.898304]}, {id:"4643",name: 'Парк од', point:[106.9348699, 47.9196281]}];
+  const markers = [
+    { id: "124", name: "Хан-Уул", point: [106.895121, 47.898304] },
+    { id: "4643", name: "Парк од", point: [106.9348699, 47.9196281] },
+  ];
 
-    const onClickMarker = (id:string, name:string) => {
-      setSelectedMarker(id);
-      setSelectedMarkerName(name)
-      setOpenSidebar(true);
-    }
+  const onClickMarker = (id: string, name: string) => {
+    setSelectedMarker(id);
+    setSelectedMarkerName(name);
+    setOpenSidebar(true);
+  };
   return (
     <div className="relative">
       {openSidebar && (
