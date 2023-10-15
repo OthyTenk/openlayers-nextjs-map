@@ -8,6 +8,8 @@ import { useState } from "react";
 import mapConfig from "./config.json";
 
 import MapPane from "./components/MapPane";
+import Link from "next/link";
+import PageLink from "./components/Navbar";
 
 
 const geojsonObject = mapConfig.geojsonObject;
@@ -45,6 +47,8 @@ export default function Home() {
   const [features, setFeatures] = useState(addMarkers(markersLonLat));
   
   return (
-    <MapPane/>
+    <div className="p-2">
+      <MapPane />
+    </div>
   );
 }
