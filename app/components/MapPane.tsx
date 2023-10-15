@@ -1,16 +1,22 @@
-'use client'
+"use client";
 import Map from "ol/Map";
 import View from "ol/View";
 import "ol/ol.css";
 import { useEffect, useRef, useState } from "react";
 // import "./MapPane.css";
-import { Attribution, FullScreen, Rotate, ScaleLine, defaults } from "ol/control";
+import {
+  Attribution,
+  FullScreen,
+  Rotate,
+  ScaleLine,
+  defaults,
+} from "ol/control";
 import TileLayer from "ol/layer/Tile";
 import { TileWMS } from "ol/source";
 import XYZ from "ol/source/XYZ";
 import mapConfig from "../config.json";
 
-const WEB_MERCATOR_COORDINATE_SYSTEM_ID = "EPSG:4326"; 
+const WEB_MERCATOR_COORDINATE_SYSTEM_ID = "EPSG:4326";
 const geojsonObject = mapConfig.geojsonObject;
 
 const MapPane = () => {
@@ -88,11 +94,7 @@ const MapPane = () => {
     <div
       ref={mapTargetElement}
       className="map"
-      style={{
-        width: "100vw",
-        height: "100vh",
-        position: "relative",
-      }}
+      style={{ width: "100vw", height: "100vh" }}
     ></div>
   );
 };

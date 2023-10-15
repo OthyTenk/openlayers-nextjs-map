@@ -1,7 +1,6 @@
 import MapBrowserEvent from "ol/MapBrowserEvent";
 import { ReactNode, useEffect, useMemo, useRef } from "react";
 
-
 import { Feature } from "ol";
 import { FeatureLike } from "ol/Feature";
 import { Geometry } from "ol/geom";
@@ -70,7 +69,7 @@ export function FeatureStore({
     return () => {
       map.un("click", onClick);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, selectedFeature]);
 
   useEffect(() => {
