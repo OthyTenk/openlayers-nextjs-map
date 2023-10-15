@@ -105,7 +105,7 @@ export const CustomMarker = ({
             size: children.props.size || 15,
             color: children.props.color ? children.props.color : "black",
             outline: children.props.outline,
-            isMarker: true,
+            isMarker: false,
           })
         );
 
@@ -126,6 +126,8 @@ export const CustomMarker = ({
           annotation: annotationRef.current,
           properties,
         });
+
+        console.log(properties)
       }
       // Perform actions on selected Features
       // Example: change style, display information, etc.
@@ -197,7 +199,8 @@ export const CustomMarker = ({
   useEffect(() => {
     annotationRef.current.setProperties({
       ...properties,
-      shape: "Marker",
+      // shape: "Marker",
+      shape: "Circle",
       isModifying: false,
       source: annotationLayerRef.current.getSource(),
       layer: annotationLayerRef.current,
